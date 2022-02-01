@@ -1,0 +1,11 @@
+[Unit]
+Description=Hazelcast
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 1
+ExecStart=/bin/sh /bin/jet.sh
+
+[Install]
+WantedBy=multi-user.target
